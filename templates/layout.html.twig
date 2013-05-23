@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title '' %} - Tournament</title>
+
+        <link href="{{ app.request.basepath }}/css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        {% block navigation %}
+            <nav>
+                <ul>
+                    <li><a href="{{ path('public.homepage') }}">Home</a></li>
+                    <li><a href="{{ path('manager.homepage') }}">Manager</a></li>
+                    <li><a href="{{ path('admin.homepage') }}">Admin</a></li>
+                </ul>
+            </nav>
+        {% endblock %}
+        {% block content %}{% endblock %}
+    </body>
+</html>
